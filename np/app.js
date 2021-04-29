@@ -11,7 +11,11 @@ const path         = require('path');
 
 
 mongoose
-  .connect('mongodb://localhost/starter-code', {useNewUrlParser: true})
+  .connect('mongodb://localhost/lab-mongoose-movies',
+   {
+     useNewUrlParser: true,
+     useUnifiedTopology: true
+    })
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -23,6 +27,9 @@ const app_name = require('./package.json').name;
 const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.')[0]}`);
 
 const app = express();
+
+
+
 
 // Middleware Setup
 app.use(logger('dev'));
@@ -47,12 +54,15 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 
 // default value for title local
-app.locals.title = 'Express - Generated with IronGenerator';
+app.locals.title = 'Celebrities and movies';
 
 
 
 const index = require('./routes/index');
 app.use('/', index);
+
+const celebrities = require('./routes/celebrities');
+app.use('/', celebrities);
 
 
 module.exports = app;
