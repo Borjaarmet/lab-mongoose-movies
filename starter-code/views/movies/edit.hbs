@@ -1,0 +1,20 @@
+<h2> Update the movie</h2>
+
+<form action="/movie/{{movie._id}}/edit" method="POST">
+
+<label for="title">Title: 
+<input type="text" name="title" value="{{movie.title}}">
+</label>
+
+<br>
+<label for="genre">Genre: 
+<input type="text" name="genre" value="{{movie.genre}}">
+</label>
+
+<br>
+<label for="plot">Plot: 
+<input type="text" name="cplot" value="{{movie.plot}}">
+</label>
+
+<button type="submit" >Save Changes</button>
+</form>
