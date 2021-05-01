@@ -70,9 +70,8 @@ router.post('/movies/:id/edit',(req,res,next) => {
     const {id} = req.params;
     const {title,genre,plot} = req.body;
    Movie.findByIdAndUpdate(id, {title,genre,plot}, {new:true})
-    .then((updatedMovie) => {
-        console.log(updatedMovie)
-        res.redirect('/movies', {updatedMovie})
+    .then(() => {
+        res.redirect('/movies')
     })
     .catch((err) => {
         next(err)

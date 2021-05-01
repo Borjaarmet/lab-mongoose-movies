@@ -1,19 +1,26 @@
-
+<nav class="nav-bar">
+    <button class="main-btns">
+          <a href="/">Go Back</a>
+    </button>
+</nav>
     <h2> Update the celebrity</h2>
+<div class="container3">
+    <div class="box-form">
+        <form action="/celebrities/{{celebrity._id}}/edit" method="POST">
 
-<form action="/celebrities" method="POST">
+        <label for="name">Name: </label>
+        <input type="text" name="name" value="{{celebrity.name}}">
 
-<label for="name">Name: </label>
-<input type="text" name="name" value="{{celebrity.name}}">
+        <br>
+        <label for="occupation">Occupation: </label>
+        <input type="text" name="occupation" value="{{celebrity.occupation}}">
 
-<br>
-<label for="occupation">Occupation: </label>
-<input type="text" name="occupation" value="{{celebrity.occupation}}">
-
-<br>
-<label for="catchPhrase">CatchPhrase: </label>
-<input type="text" name="catchPhrase" value="{{celebrity.catchPhrase}}">
-
-<button type="submit">Submit</button>
-</form>
-
+        <br>
+        <label for="catchPhrase">CatchPhrase: </label>
+        <input type="text" name="catchPhrase" value="{{celebrity.catchPhrase}}">
+        <div class="submit">
+        <button class="btn" type="submit">Save Changes</button>
+        </form>
+        </div>
+    </div>
+</div>

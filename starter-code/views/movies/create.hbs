@@ -1,14 +1,23 @@
+<nav class="nav-bar">
+    <button class="main-btns">
+          <a href="/">Go Back</a>
+    </button>
+</nav>
 <h2>Add a new movie</h2>
-
-<form action="/movies/create" method="POST">
-<label for="name">Title: </label>
-<input type="text" name="title">
-<br>
-<label for="occupation">Genre: </label>
-<input type="text" name="genre" >
-<br>
-<label for="catchPhrase">Plot: </label>
-<input type="text" name="plot" >
-
-<button type="submit">Submit</button>
-</form>
+<div class="container3">
+    <div class="box-form">
+        <form action="/movies/create" method="POST">
+        <label for="name">Title: </label>
+        <input type="text" name="title">
+        <br>
+        <label for="occupation">Genre: </label>
+        <input type="text" name="genre" >
+        <br>
+        <label for="catchPhrase">Plot: </label>
+        <input type="text" name="plot" >
+        <div class="submit">
+            <button class="btn" type="submit">Submit</button>
+        </div>
+        </form>
+    </div>
+</div>

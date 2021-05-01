@@ -1,17 +1,30 @@
-<a href="/">Go Back</a>
-<a href="/movies/create">Add a movie!</a>
+<nav class="nav-bar">
+    <button class="main-btns">
+        <a href="/">Go Back</a>
+    </button>         
+    <button class="main-btns">
+        <a href="/movies/create">Add a movie!</a>
+    </button>
+  </nav>
 
 <h2>All the movies</h2>
+<div class="container2">
 
-<ul>
-{{#each movies}}
-<h3>{{title}}</h3>
-<a href="/movies/{{_id}}/details"> Details</a>
+  {{#each movies}}
+    <div class="box-celeb rotate_right rotate_left">
+        <div class="title-celeb">
+            <h3>{{title}}</h3>
+        </div>
+        <div class="btns-celeb">
+            <a class="btn" href="/movies/{{_id}}/details"> Details</a>
 
-<form action="movies/{{_id}}/delete" method="POST">
-    <button type="submit">Delete</button>
-</form>
+            <form action="movies/{{_id}}/delete" method="POST">
+                <button class="btn" type="submit">Delete</button>
+            </form>
 
-<a href="/movies/{{_id}}/edit">Edit</a>
-{{/each}}
-</ul>
+            <a class="btn" href="/movies/{{_id}}/edit">Edit</a>
+        </div>
+       
+    </div>
+    {{/each}}
+</div>

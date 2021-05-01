@@ -1,10 +1,15 @@
+<nav class="nav-bar">
+    <button class="main-btns">
+          <a href="/">Go Back</a>
+    </button>
+</nav>
 <h2>Detail about the movie</h2>
-
-{{#each movie}}
-
-<h3>{{this.title}}</h3>
-<p>{{this.genre}}</p>
-<p>{{this.plot}}</p>
-
-
-{{/each}}
+<div class="box-details">
+ {{#each movie}}
+    
+        <h3>{{this.title}}</h3>
+        <p> {{this.genre}}</p>
+        <p> {{this.plot}}</p>
+    
+ {{/each}}
+</div>

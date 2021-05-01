@@ -1,20 +1,31 @@
+<nav class="nav-bar">
+    <button class="main-btns">
+          <a href="/">Go Back</a>
+    </button>
+</nav>
+
 <h2> Update the movie</h2>
 
-<form action="/movie/{{movie._id}}/edit" method="POST">
+<div class="container3">
+    <div class="box-form">
+        <form action="/movies/{{movie._id}}/edit" method="POST">
 
-<label for="title">Title: 
-<input type="text" name="title" value="{{movie.title}}">
-</label>
+        <label for="title">Title: 
+        <input type="text" name="title" value="{{movie.title}}">
+        </label>
 
-<br>
-<label for="genre">Genre: 
-<input type="text" name="genre" value="{{movie.genre}}">
-</label>
+        <br>
+        <label for="genre">Genre: 
+        <input type="text" name="genre" value="{{movie.genre}}">
+        </label>
 
-<br>
-<label for="plot">Plot: 
-<input type="text" name="cplot" value="{{movie.plot}}">
-</label>
-
-<button type="submit" >Save Changes</button>
-</form>
+        <br>
+        <label for="plot">Plot: 
+        <input type="text" name="cplot" value="{{movie.plot}}">
+        </label>
+        <div class="submit">
+            <button class="btn" type="submit" >Save Changes</button>
+        </div>
+        </form>
+    </div>
+</div>
